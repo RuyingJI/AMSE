@@ -1,42 +1,41 @@
 import 'package:flutter/material.dart';
-import '../data/series_data.dart';
+import '../data/foods_data.dart';
 import '../models/media.dart';
 
-class SeriesFavoritesPage extends StatelessWidget {
-  const SeriesFavoritesPage({super.key});
+class FoodsFavoritesPage extends StatelessWidget {
+  const FoodsFavoritesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<Media> favoriteSeries =
-        series.where((serie) => serie.isLiked).toList();
+    List<Media> favoriteFoods = foods.where((food) => food.isLiked).toList();
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Séries Favoris"),
+        title: const Text("Plats Favoris"),
       ),
-      body: favoriteSeries.isEmpty
+      body: favoriteFoods.isEmpty
           ? const Center(
               child: Text(
-                "Aucune série ajoutée aux favoris.",
+                "Aucun plat ajouté aux favoris.",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             )
           : ListView.builder(
-              itemCount: favoriteSeries.length,
+              itemCount: favoriteFoods.length,
               itemBuilder: (context, index) {
-                final serie = favoriteSeries[index];
+                final food = favoriteFoods[index];
                 return Card(
                   margin:
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   child: ListTile(
                     leading: Image.network(
-                      serie.imageUrl,
+                      food.imageUrl,
                       width: 50,
                       height: 50,
                       fit: BoxFit.cover,
                     ),
-                    title: Text(serie.title),
-                    subtitle: Text(serie.description),
+                    title: Text(food.title),
+                    subtitle: Text(food.description),
                   ),
                 );
               },

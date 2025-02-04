@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../data/media_data.dart';
+import '../data/series_data.dart';
 import '../models/media.dart';
 
 class SeriesPage extends StatefulWidget {
@@ -20,14 +20,21 @@ class _SeriesPageState extends State<SeriesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Series"),
+        title: const Text("Séries Chinoises"),
       ),
-      body: ListView(
-        children: series.map((serie) {
+      body: ListView.builder(
+        itemCount: series.length,
+        itemBuilder: (context, index) {
+          final serie = series[index];
           return Card(
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: ListTile(
-              leading: Image.network(serie.imageUrl,
-                  width: 50, height: 50, fit: BoxFit.cover),
+              leading: Image.network(
+                serie.imageUrl,
+                width: 50,
+                height: 50,
+                fit: BoxFit.cover,
+              ),
               title: Text(serie.title),
               subtitle: Text(serie.description),
               trailing: IconButton(
@@ -35,12 +42,11 @@ class _SeriesPageState extends State<SeriesPage> {
                   serie.isLiked ? Icons.favorite : Icons.favorite_border,
                   color: serie.isLiked ? Colors.red : null,
                 ),
-                onPressed: () => toggleLike(
-                    serie), // Appelle toggleLike pour mettre à jour l'état
+                onPressed: () => toggleLike(serie),
               ),
             ),
           );
-        }).toList(),
+        },
       ),
     );
   }

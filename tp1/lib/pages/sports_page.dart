@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../data/media_data.dart';
+import '../data/sports_data.dart';
 import '../models/media.dart';
 
 class SportsPage extends StatefulWidget {

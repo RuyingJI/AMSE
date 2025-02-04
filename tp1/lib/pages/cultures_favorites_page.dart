@@ -1,42 +1,41 @@
 import 'package:flutter/material.dart';
-import '../data/series_data.dart';
+import '../data/cities_data.dart';
 import '../models/media.dart';
 
-class SeriesFavoritesPage extends StatelessWidget {
-  const SeriesFavoritesPage({super.key});
+class CitiesFavoritesPage extends StatelessWidget {
+  const CitiesFavoritesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<Media> favoriteSeries =
-        series.where((serie) => serie.isLiked).toList();
+    List<Media> favoriteCities = cities.where((city) => city.isLiked).toList();
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Séries Favoris"),
+        title: const Text("Villes Favoris"),
       ),
-      body: favoriteSeries.isEmpty
+      body: favoriteCities.isEmpty
           ? const Center(
               child: Text(
-                "Aucune série ajoutée aux favoris.",
+                "Aucune ville ajoutée aux favoris.",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             )
           : ListView.builder(
-              itemCount: favoriteSeries.length,
+              itemCount: favoriteCities.length,
               itemBuilder: (context, index) {
-                final serie = favoriteSeries[index];
+                final city = favoriteCities[index];
                 return Card(
                   margin:
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   child: ListTile(
                     leading: Image.network(
-                      serie.imageUrl,
+                      city.imageUrl,
                       width: 50,
                       height: 50,
                       fit: BoxFit.cover,
                     ),
-                    title: Text(serie.title),
-                    subtitle: Text(serie.description),
+                    title: Text(city.title),
+                    subtitle: Text(city.description),
                   ),
                 );
               },

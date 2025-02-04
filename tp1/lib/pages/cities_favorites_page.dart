@@ -1,42 +1,42 @@
 import 'package:flutter/material.dart';
-import '../data/series_data.dart';
+import '../data/cultures_data.dart';
 import '../models/media.dart';
 
-class SeriesFavoritesPage extends StatelessWidget {
-  const SeriesFavoritesPage({super.key});
+class CulturesFavoritesPage extends StatelessWidget {
+  const CulturesFavoritesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<Media> favoriteSeries =
-        series.where((serie) => serie.isLiked).toList();
+    List<Media> favoriteCultures =
+        cultures.where((culture) => culture.isLiked).toList();
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Séries Favoris"),
+        title: const Text("Cultures Favoris"),
       ),
-      body: favoriteSeries.isEmpty
+      body: favoriteCultures.isEmpty
           ? const Center(
               child: Text(
-                "Aucune série ajoutée aux favoris.",
+                "Aucune culture ajoutée aux favoris.",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             )
           : ListView.builder(
-              itemCount: favoriteSeries.length,
+              itemCount: favoriteCultures.length,
               itemBuilder: (context, index) {
-                final serie = favoriteSeries[index];
+                final culture = favoriteCultures[index];
                 return Card(
                   margin:
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   child: ListTile(
                     leading: Image.network(
-                      serie.imageUrl,
+                      culture.imageUrl,
                       width: 50,
                       height: 50,
                       fit: BoxFit.cover,
                     ),
-                    title: Text(serie.title),
-                    subtitle: Text(serie.description),
+                    title: Text(culture.title),
+                    subtitle: Text(culture.description),
                   ),
                 );
               },

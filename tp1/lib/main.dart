@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'MEDIA Home Page'),
+      home: const MyHomePage(title: 'Guide de Voyage en Chine'),
     );
   }
 }
@@ -59,11 +59,11 @@ class _MyHomePageState extends State<MyHomePage> {
       body: _pages[_selectedIndex], // 动态加载选中的页面
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.movie), label: "Media"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Accueil"),
+          BottomNavigationBarItem(icon: Icon(Icons.movie), label: "Catégories"),
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite), label: "Favorites"),
-          BottomNavigationBarItem(icon: Icon(Icons.info), label: "About"),
+          BottomNavigationBarItem(icon: Icon(Icons.info), label: "À propos"),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.deepPurple,
