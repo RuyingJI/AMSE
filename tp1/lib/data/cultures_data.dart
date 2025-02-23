@@ -5,21 +5,21 @@ List<Media> cultures = [
     title: "Opéra de Pékin",
     description:
         "Un art traditionnel chinois combinant musique, danse et costumes.",
-    imageUrl: "https://example.com/beijing-opera.jpg",
+    imageUrl: "assets/images/jingju.jpeg",
   ),
   Media(
     title: "Calligraphie chinoise",
     description: "L'art de l'écriture avec des pinceaux et de l'encre.",
-    imageUrl: "https://example.com/calligraphy.jpg",
+    imageUrl: "assets/images/shufa.jpeg",
   ),
   Media(
     title: "Fête du Nouvel An Chinois",
     description: "La célébration la plus importante de l'année.",
-    imageUrl: "https://example.com/chinese-new-year.jpg",
+    imageUrl: "assets/images/chunjie.png",
   ),
   Media(
     title: "Arts martiaux chinois",
     description: "Wushu, Tai Chi et autres pratiques traditionnelles.",
-    imageUrl: "https://example.com/martial-arts.jpg",
+    imageUrl: "assets/images/taiji.jpg",
   ),
 ];

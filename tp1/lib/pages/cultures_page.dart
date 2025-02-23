@@ -25,22 +25,27 @@ class _CulturesPageState extends State<CulturesPage> {
       body: ListView(
         children: cultures.map((culture) {
           return Card(
-            child: ListTile(
-              leading: Image.network(
-                culture.imageUrl,
-                width: 50,
-                height: 50,
-                fit: BoxFit.cover,
-              ),
-              title: Text(culture.title),
-              subtitle: Text(culture.description),
-              trailing: IconButton(
-                icon: Icon(
-                  culture.isLiked ? Icons.favorite : Icons.favorite_border,
-                  color: culture.isLiked ? Colors.red : null,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset(
+                  culture.imageUrl,
+                  width: double.infinity, // 让图片宽度适应屏幕
+                  height: 300, // 设置固定高度
+                  fit: BoxFit.cover,
                 ),
-                onPressed: () => toggleLike(culture),
-              ),
+                ListTile(
+                  title: Text(culture.title),
+                  subtitle: Text(culture.description),
+                  trailing: IconButton(
+                    icon: Icon(
+                      culture.isLiked ? Icons.favorite : Icons.favorite_border,
+                      color: culture.isLiked ? Colors.red : null,
+                    ),
+                    onPressed: () => toggleLike(culture),
+                  ),
+                ),
+              ],
             ),
           );
         }).toList(),

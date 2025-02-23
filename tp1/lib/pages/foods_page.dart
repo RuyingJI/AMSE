@@ -25,22 +25,27 @@ class _FoodsPageState extends State<FoodsPage> {
       body: ListView(
         children: foods.map((food) {
           return Card(
-            child: ListTile(
-              leading: Image.network(
-                food.imageUrl,
-                width: 50,
-                height: 50,
-                fit: BoxFit.cover,
-              ),
-              title: Text(food.title),
-              subtitle: Text(food.description),
-              trailing: IconButton(
-                icon: Icon(
-                  food.isLiked ? Icons.favorite : Icons.favorite_border,
-                  color: food.isLiked ? Colors.red : null,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset(
+                  food.imageUrl,
+                  width: double.infinity, // 让图片宽度适应屏幕
+                  height: 500, // 设置固定高度
+                  fit: BoxFit.cover,
                 ),
-                onPressed: () => toggleLike(food),
-              ),
+                ListTile(
+                  title: Text(food.title),
+                  subtitle: Text(food.description),
+                  trailing: IconButton(
+                    icon: Icon(
+                      food.isLiked ? Icons.favorite : Icons.favorite_border,
+                      color: food.isLiked ? Colors.red : null,
+                    ),
+                    onPressed: () => toggleLike(food),
+                  ),
+                ),
+              ],
             ),
           );
         }).toList(),

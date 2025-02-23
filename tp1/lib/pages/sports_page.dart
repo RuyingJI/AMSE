@@ -20,24 +20,34 @@ class _SportsPageState extends State<SportsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Sports"),
+        title: const Text("Sports traditionnels"),
       ),
       body: ListView(
         children: sports.map((sport) {
           return Card(
-            child: ListTile(
-              leading: Image.network(sport.imageUrl,
-                  width: 50, height: 50, fit: BoxFit.cover),
-              title: Text(sport.title),
-              subtitle: Text(sport.description),
-              trailing: IconButton(
-                icon: Icon(
-                  sport.isLiked ? Icons.favorite : Icons.favorite_border,
-                  color: sport.isLiked ? Colors.red : null,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // 本地图片
+                Image.asset(
+                  sport.imageUrl,
+                  width: double.infinity,
+                  height: 250,
+                  fit: BoxFit.cover,
                 ),
-                onPressed: () => toggleLike(
-                    sport), // Appelle toggleLike pour mettre à jour l'état
-              ),
+                // 📜 运动详情
+                ListTile(
+                  title: Text(sport.title),
+                  subtitle: Text(sport.description),
+                  trailing: IconButton(
+                    icon: Icon(
+                      sport.isLiked ? Icons.favorite : Icons.favorite_border,
+                      color: sport.isLiked ? Colors.red : null,
+                    ),
+                    onPressed: () => toggleLike(sport),
+                  ),
+                ),
+              ],
             ),
           );
         }).toList(),

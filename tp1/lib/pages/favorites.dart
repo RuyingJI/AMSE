@@ -150,7 +150,7 @@ class FavoritesPage extends StatelessWidget {
             ),
 
             // Séries
-            GestureDetector(
+            /*  GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
@@ -180,7 +180,7 @@ class FavoritesPage extends StatelessWidget {
                 ),
               ),
             ),
-
+*/
             // Sports
             GestureDetector(
               onTap: () {
@@ -202,7 +202,7 @@ class FavoritesPage extends StatelessWidget {
                     const Icon(Icons.sports, size: 40, color: Colors.red),
                     const SizedBox(width: 16),
                     const Text(
-                      "Sports Favorites",
+                      "Activitys Favorites",
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),

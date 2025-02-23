@@ -66,8 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.info), label: "À propos"),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.deepPurple,
-        unselectedItemColor: Colors.grey,
+        selectedItemColor: Colors.red.shade300,
+        unselectedItemColor: Colors.red.shade300,
         onTap: _onItemTapped,
       ),
     );

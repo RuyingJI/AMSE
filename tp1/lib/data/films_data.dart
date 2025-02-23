@@ -2,52 +2,38 @@ import '../models/media.dart';
 
 List<Media> films = [
   Media(
-    title: "Bonjour, Li Huanying",
+    title: "Goodbye Mr. Loser",
     description:
-        "Une comédie touchante sur un voyage dans le temps et une histoire familiale émouvante.",
-    imageUrl: "https://example.com/hi-mom.jpg",
-    actors: "Shen Teng, Jia Ling",
-  ),
-  Media(
-    title: "Les Ennuis de Charlotte",
-    description:
-        "Une comédie hilarante et pleine d'émotions, explorant les choix de vie et les rêves.",
-    imageUrl: "https://example.com/goodbye-mr-loser.jpg",
+        "Une comédie hilarante où un homme médiocre voyage dans le temps et revit sa jeunesse, découvrant le vrai sens du bonheur.",
+    imageUrl: "assets/images/xialuotefannao.jpeg",
     actors: "Shen Teng, Ma Li",
   ),
   Media(
-    title: "Le Milliardaire de Xihong City",
+    title: "Hello Mr. Billionaire",
     description:
-        "Une comédie explosive qui explore la relation entre la richesse et le bonheur.",
-    imageUrl: "https://example.com/hello-mr-billionaire.jpg",
+        "Un homme ordinaire hérite d'une fortune colossale et doit dépenser un milliard en un mois pour en gagner encore plus, une satire sur la richesse et le bonheur.",
+    imageUrl: "assets/images/xihongshishoufu.jpeg",
     actors: "Shen Teng, Vivian Sung",
   ),
   Media(
     title: "Pegasus : La Course de la Vie",
     description:
-        "Un film de course passionnant qui illustre la poursuite des rêves et les défis de la vie.",
-    imageUrl: "https://example.com/pegasus.jpg",
+        "Un ancien pilote de course tente un retour spectaculaire malgré l'âge et les défis, une histoire de persévérance et de passion.",
+    imageUrl: "assets/images/feichirensheng.jpeg",
     actors: "Shen Teng, Huang Jingyu",
   ),
   Media(
-    title: "Alien Insensé",
+    title: "Successor (Film Attrape-Peluches)",
     description:
-        "Une comédie absurde de science-fiction qui combine des conflits et des fusions culturelles sino-étrangères.",
-    imageUrl: "https://example.com/crazy-alien.jpg",
-    actors: "Shen Teng, Huang Bo",
-  ),
-  Media(
-    title: "Attrapeur de Peluches",
-    description:
-        "Une comédie romantique autour d'une machine attrape-peluches et d'un amour inattendu.",
-    imageUrl: "https://example.com/claw-machine.jpg",
+        "Une comédie romantique où un passionné de machines à pince tombe amoureux d'une femme partageant la même passion. Connu sous le nom de **'抓娃娃' (Zhua Wa Wa)** en Chine.",
+    imageUrl: "assets/images/successor.jpg",
     actors: "Shen Teng, Ma Li",
   ),
   Media(
-    title: "Seul sur la Lune",
+    title: "Moon Man",
     description:
-        "Une comédie de science-fiction émouvante racontant l'histoire d'un homme laissé seul sur la Lune.",
-    imageUrl: "https://example.com/moon-man.jpg",
+        "Un technicien lunaire est accidentellement laissé seul sur la Lune après une évacuation d'urgence, croyant être le dernier humain vivant. Une aventure touchante et comique.",
+    imageUrl: "assets/images/moonman.jpg",
     actors: "Shen Teng, Ma Li",
   ),
 ];

@@ -5,21 +5,22 @@ List<Media> cities = [
     title: "Pékin",
     description:
         "La capitale de la Chine avec des sites historiques célèbres comme la Cité Interdite.",
-    imageUrl: "https://example.com/beijing.jpg",
+    imageUrl: "assets/images/beijing.jpg",
   ),
   Media(
     title: "Shanghai",
     description: "Une métropole moderne avec une culture unique.",
-    imageUrl: "https://example.com/shanghai.jpg",
+    imageUrl: "assets/images/shanghai.jpg",
   ),
   Media(
     title: "Xi'an",
     description: "Ville historique connue pour l'armée de terre cuite.",
-    imageUrl: "https://example.com/xian.jpg",
+    imageUrl: "assets/images/xian.png",
   ),
   Media(
-    title: "Guilin",
-    description: "Célèbre pour ses paysages karstiques spectaculaires.",
-    imageUrl: "https://example.com/guilin.jpg",
+    title: "Lhassa",
+    description:
+        "Capitale du Tibet, célèbre pour le Palais du Potala et ses monastères bouddhistes.",
+    imageUrl: "assets/images/lasa.jpeg",
   ),
 ];

@@ -25,22 +25,27 @@ class _CitiesPageState extends State<CitiesPage> {
       body: ListView(
         children: cities.map((city) {
           return Card(
-            child: ListTile(
-              leading: Image.network(
-                city.imageUrl,
-                width: 50,
-                height: 50,
-                fit: BoxFit.cover,
-              ),
-              title: Text(city.title),
-              subtitle: Text(city.description),
-              trailing: IconButton(
-                icon: Icon(
-                  city.isLiked ? Icons.favorite : Icons.favorite_border,
-                  color: city.isLiked ? Colors.red : null,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset(
+                  city.imageUrl,
+                  width: double.infinity,
+                  height: 250,
+                  fit: BoxFit.cover,
                 ),
-                onPressed: () => toggleLike(city),
-              ),
+                ListTile(
+                  title: Text(city.title),
+                  subtitle: Text(city.description),
+                  trailing: IconButton(
+                    icon: Icon(
+                      city.isLiked ? Icons.favorite : Icons.favorite_border,
+                      color: city.isLiked ? Colors.red : null,
+                    ),
+                    onPressed: () => toggleLike(city),
+                  ),
+                ),
+              ],
             ),
           );
         }).toList(),

@@ -29,10 +29,10 @@ class _SeriesPageState extends State<SeriesPage> {
           return Card(
             margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: ListTile(
-              leading: Image.network(
-                serie.imageUrl,
-                width: 50,
-                height: 50,
+              leading: Image.asset(
+                serie.imageUrl, // 本地图片路径
+                width: 300, // 增大图片尺寸
+                height: 300,
                 fit: BoxFit.cover,
               ),
               title: Text(serie.title),
