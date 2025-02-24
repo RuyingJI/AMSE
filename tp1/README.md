@@ -16,15 +16,15 @@ Notre application permet aux utilisateurs de :
 
 Vidéo de démonstration
 
--Lien vers la vidéo de démonstration (à ajouter si disponible)
+• Lien vers la vidéo de démonstration (à ajouter si disponible)
 
 Prérequis
 
 Logiciels et outils nécessaires
 
- -Flutter SDK (version stable)
- -Android Studio (optionnel, mais recommandé pour l’émulation)
- -Un émulateur Android ou un iPhone réel pour les tests
+• Flutter SDK (version stable)
+• Android Studio (optionnel, mais recommandé pour l’émulation)
+• Un émulateur Android ou un iPhone réel pour les tests
 
 Installation des dépendances
 
@@ -37,13 +37,13 @@ flutter doctor
 
 3️⃣ Cloner le projet et installer les dépendances
 
-git clone https://github.com/RuyingJI/AMSE.git
-cd tp1
-flutter pub get
+• git clone https://github.com/RuyingJI/AMSE.git
+• cd tp1
+• flutter pub get
 
 4️⃣ Lancer l’application sur chrome
 
-flutter run -d chrome
+• flutter run -d chrome
 
 Paramètres
 
@@ -54,12 +54,12 @@ Il est possible de modifier certains paramètres de l’application pour personn
 
 Structure du Projet
 
- lib/ → Contient le code principal de l’application.
- lib/data/ → Stocke les fichiers de données pour chaque catégorie.
- lib/models/ → Définit le modèle Media.
- lib/pages/ → Contient toutes les pages de l’application.
- lib/widgets/ → Composants réutilisables comme les cartes média.
- assets/images/ → Stocke les images utilisées dans l’application.
+ 📌 lib/ → Contient le code principal de l’application.
+ 📌 lib/data/ → Stocke les fichiers de données pour chaque catégorie.
+ 📌 lib/models/ → Définit le modèle Media.
+ 📌 lib/pages/ → Contient toutes les pages de l’application.
+ 📌 lib/widgets/ → Composants réutilisables comme les cartes média.
+ 📌 assets/images/ → Stocke les images utilisées dans l’application.
 
 Lancement et Navigation
 
