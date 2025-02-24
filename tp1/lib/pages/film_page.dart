@@ -25,7 +25,7 @@ class _FilmPageState extends State<FilmPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🌟 Introduction sur Shen Teng et Ma Li
+          //  Introduction sur Shen Teng et Ma Li
           Container(
             padding: const EdgeInsets.all(16),
             color: Colors.amber.shade100, // Fond léger pour démarquer
@@ -42,7 +42,7 @@ class _FilmPageState extends State<FilmPage> {
           const SizedBox(
               height: 10), // Espacement entre l'introduction et la liste
 
-          // 📽 Liste des films
+          //  Liste des films
           Expanded(
             child: ListView(
               children: films.map((film) {
@@ -50,14 +50,14 @@ class _FilmPageState extends State<FilmPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // 🖼 Affichage de l'image (grand format)
+                      //  Affichage de l'image (grand format)
                       Image.asset(
                         film.imageUrl,
                         width: double.infinity,
                         height: 800,
                         fit: BoxFit.cover,
                       ),
-                      // 📜 Informations sur le film
+                      //  Informations sur le film
                       ListTile(
                         title: Text(film.title),
                         subtitle: Column(

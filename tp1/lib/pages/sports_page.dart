@@ -35,7 +35,7 @@ class _SportsPageState extends State<SportsPage> {
                   height: 250,
                   fit: BoxFit.cover,
                 ),
-                // 📜 运动详情
+                //  运动详情
                 ListTile(
                   title: Text(sport.title),
                   subtitle: Text(sport.description),

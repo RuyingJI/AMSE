@@ -19,7 +19,7 @@ class MediaPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // 🎬 Films Chinois
+            //  Films Chinois
             _buildCategoryCard(
               context,
               title: "Films Chinois",
@@ -28,7 +28,7 @@ class MediaPage extends StatelessWidget {
               destination: const FilmPage(),
             ),
 
-            // 🏙️ Villes Célèbres
+            //  Villes Célèbres
             _buildCategoryCard(
               context,
               title: "Villes célèbres",
@@ -37,7 +37,7 @@ class MediaPage extends StatelessWidget {
               destination: const CitiesPage(),
             ),
 
-            // 🍜 Cuisine Chinoise
+            //  Cuisine Chinoise
             _buildCategoryCard(
               context,
               title: "Cuisine Chinoise",
@@ -46,7 +46,7 @@ class MediaPage extends StatelessWidget {
               destination: const FoodsPage(),
             ),
 
-            // 🏯 Culture Chinoise
+            //  Culture Chinoise
             _buildCategoryCard(
               context,
               title: "Culture Chinoise",
@@ -55,7 +55,7 @@ class MediaPage extends StatelessWidget {
               destination: const CulturesPage(),
             ),
 
-            /*   // 📺 Séries Chinoises
+            /*   //  Séries Chinoises
             _buildCategoryCard(
               context,
               title: "Séries Chinoises",
@@ -64,7 +64,7 @@ class MediaPage extends StatelessWidget {
               destination: const SeriesPage(),
             ),
 */
-            // 🏆 Sports Traditionnels
+            //  Sports Traditionnels
             _buildCategoryCard(
               context,
               title: "Sports Traditionnels",
@@ -78,7 +78,7 @@ class MediaPage extends StatelessWidget {
     );
   }
 
-  // 📌 Fonction pour générer les cartes de catégories
+  //  Fonction pour générer les cartes de catégories
   Widget _buildCategoryCard(BuildContext context,
       {required String title,
       required IconData icon,

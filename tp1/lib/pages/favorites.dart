@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'cities_favorites_page.dart';
 import 'foods_favorites_page.dart';
 import 'cultures_favorites_page.dart';
-import 'series_favorites_page.dart';
+//import 'series_favorites_page.dart';
 import 'sports_favorites_page.dart';
 import 'film_favorites_page.dart';
 

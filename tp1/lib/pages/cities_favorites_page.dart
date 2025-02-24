@@ -1,42 +1,70 @@
 import 'package:flutter/material.dart';
-import '../data/cultures_data.dart';
+import '../data/cities_data.dart';
 import '../models/media.dart';
 
-class CulturesFavoritesPage extends StatelessWidget {
-  const CulturesFavoritesPage({super.key});
+class CitiesFavoritesPage extends StatefulWidget {
+  const CitiesFavoritesPage({super.key});
+
+  @override
+  State<CitiesFavoritesPage> createState() => _CitiesFavoritesPageState();
+}
+
+class _CitiesFavoritesPageState extends State<CitiesFavoritesPage> {
+  void toggleLike(Media media) {
+    setState(() {
+      media.isLiked = !media.isLiked;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    List<Media> favoriteCultures =
-        cultures.where((culture) => culture.isLiked).toList();
+    List<Media> favoriteCities =
+        cities.where((city) => city.isLiked).toList(); // 获取喜欢的城市
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Cultures Favoris"),
+        title: const Text("Villes Favoris"),
       ),
-      body: favoriteCultures.isEmpty
+      body: favoriteCities.isEmpty
           ? const Center(
               child: Text(
-                "Aucune culture ajoutée aux favoris.",
+                "Aucune ville ajoutée aux favoris.",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             )
           : ListView.builder(
-              itemCount: favoriteCultures.length,
+              itemCount: favoriteCities.length,
               itemBuilder: (context, index) {
-                final culture = favoriteCultures[index];
+                final city = favoriteCities[index];
                 return Card(
                   margin:
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  child: ListTile(
-                    leading: Image.network(
-                      culture.imageUrl,
-                      width: 50,
-                      height: 50,
-                      fit: BoxFit.cover,
-                    ),
-                    title: Text(culture.title),
-                    subtitle: Text(culture.description),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // 图片大一点
+                      Image.asset(
+                        city.imageUrl,
+                        width: double.infinity,
+                        height: 250,
+                        fit: BoxFit.cover,
+                      ),
+                      ListTile(
+                        title: Text(city.title),
+                        subtitle: Text(city.description),
+                        trailing: IconButton(
+                          icon: Icon(
+                            city.isLiked
+                                ? Icons.favorite
+                                : Icons.favorite_border,
+                            color: city.isLiked ? Colors.red : null,
+                          ),
+                          onPressed: () {
+                            toggleLike(city);
+                          },
+                        ),
+                      ),
+                    ],
                   ),
                 );
               },

@@ -8,7 +8,7 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // 🖼 Image de fond
+          //  Image de fond
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
